@@ -194,7 +194,7 @@
 		40B311822749C0BF00E18820 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40B311802749BDE600E18820 /* Roboto-Light.ttf */; };
 		40B5953B275E2FB000FA36B2 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B5953A275E2FB000FA36B2 /* EmailTextField.swift */; };
 		40B5953D275E312900FA36B2 /* TextFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B5953C275E312900FA36B2 /* TextFieldModel.swift */; };
-		40B6C80F272DB2A600B94A9A /* HockeyPlayerRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B6C80E272DB2A600B94A9A /* HockeyPlayerRole.swift */; };
+		40B6C80F272DB2A600B94A9A /* PlayerRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B6C80E272DB2A600B94A9A /* PlayerRole.swift */; };
 		40B82EC527382EDD00BED0A1 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B82EC427382EDD00BED0A1 /* LikeButton.swift */; };
 		40B82EC7273835D100BED0A1 /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B82EC6273835D100BED0A1 /* ShareButton.swift */; };
 		40B82EC92738A42B00BED0A1 /* TextViewWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B82EC82738A42B00BED0A1 /* TextViewWithPlaceholder.swift */; };
@@ -459,7 +459,7 @@
 		40B311802749BDE600E18820 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		40B5953A275E2FB000FA36B2 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		40B5953C275E312900FA36B2 /* TextFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModel.swift; sourceTree = "<group>"; };
-		40B6C80E272DB2A600B94A9A /* HockeyPlayerRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyPlayerRole.swift; sourceTree = "<group>"; };
+		40B6C80E272DB2A600B94A9A /* PlayerRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRole.swift; sourceTree = "<group>"; };
 		40B82EC427382EDD00BED0A1 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		40B82EC6273835D100BED0A1 /* ShareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareButton.swift; sourceTree = "<group>"; };
 		40B82EC82738A42B00BED0A1 /* TextViewWithPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithPlaceholder.swift; sourceTree = "<group>"; };
@@ -600,7 +600,11 @@
 		401C9B26270D155F00F91DC6 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				407BC119273BCF3100A6D580 /* Loaders */,
+				400B8F4D272B50B5008A8AFE /* FirebaseObject.swift */,
+				40C9E91D2746AB36009B0417 /* FirebaseObjectFactory.swift */,
+				4094E6CB2756DAF3000737B9 /* FirebaseObjectBuilder.swift */,
+				409AFE4E2764019C00011261 /* Storage */,
+				409AFE4D2764015600011261 /* Database */,
 				406E7C0927232FFB00DAD711 /* RealtimeDatabaseManager.swift */,
 				40B82ED12738BA9F00BED0A1 /* Database removers */,
 				40B82ED02738BA8300BED0A1 /* Database savers */,
@@ -704,7 +708,6 @@
 			children = (
 				40772C07273B2B74006CD549 /* WorkoutSchedule.swift */,
 				40429BB7274ACA8500DAD070 /* WorkoutScheduleBuilder.swift */,
-				40429BB2274AC0D400DAD070 /* WorkoutScheduleListLoader.swift */,
 				40429BBD274AE5A200DAD070 /* DayOfWeek.swift */,
 				40429BBF274AE5D600DAD070 /* TrainingType.swift */,
 				40429BC1274AF10800DAD070 /* Workout.swift */,
@@ -894,17 +897,6 @@
 			path = "Table view";
 			sourceTree = "<group>";
 		};
-		407BC119273BCF3100A6D580 /* Loaders */ = {
-			isa = PBXGroup;
-			children = (
-				407BC11A273BCF4400A6D580 /* FirebaseLoader.swift */,
-				40C44192274D78FA00F9EC8B /* FirebaseImagesLoader.swift */,
-				40C44188274D559700F9EC8B /* SquadImagesLoader.swift */,
-				409AFE4B2763C1D800011261 /* FirebaseDatabaseLoader.swift */,
-			);
-			path = Loaders;
-			sourceTree = "<group>";
-		};
 		407EF24E275CD8A6000F1B76 /* Cell models */ = {
 			isa = PBXGroup;
 			children = (
@@ -966,12 +958,10 @@
 				4098C05826E576A100F0BBE6 /* Shop */,
 				40940BEA26E412F40098EF89 /* Auth */,
 				40E2D65026E55E1E006503C7 /* ShopCategoryItem.swift */,
-				400B8F4D272B50B5008A8AFE /* FirebaseObject.swift */,
-				40B6C80E272DB2A600B94A9A /* HockeyPlayerRole.swift */,
+				40B6C80E272DB2A600B94A9A /* PlayerRole.swift */,
 				40DEC8B32718D083008A59A8 /* SportEventType.swift */,
 				40B947C126EE909100D9E8DA /* TableViewCellConfiguration.swift */,
 				409560C826F93F6D00BCA664 /* QuickActions.swift */,
-				40C9E91D2746AB36009B0417 /* FirebaseObjectFactory.swift */,
 				40429BAF274A856300DAD070 /* Cell models */,
 				407BB063274BC2AB008DF228 /* ImageData.swift */,
 			);
@@ -1071,6 +1061,55 @@
 				408CD10526E539FD005AD6D4 /* ShopItem.swift */,
 			);
 			path = Shop;
+			sourceTree = "<group>";
+		};
+		409AFE4D2764015600011261 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				409AFE50276403C100011261 /* Database models */,
+				409AFE4F276403BC00011261 /* Loaders */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		409AFE4E2764019C00011261 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				40B208CC2744F730009B769C /* EventImagesLoader.swift */,
+				40C44183274D559700F9EC8B /* StorageFlowData.swift */,
+				407BC11A273BCF4400A6D580 /* FirebaseLoader.swift */,
+				40C44192274D78FA00F9EC8B /* FirebaseImagesLoader.swift */,
+				40C44188274D559700F9EC8B /* SquadImagesLoader.swift */,
+				407BB065274BC89E008DF228 /* ClubStorageDataLoader.swift */,
+				40C4419A274DCC4E00F9EC8B /* UserImageLoader.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		409AFE4F276403BC00011261 /* Loaders */ = {
+			isa = PBXGroup;
+			children = (
+				407BB05B274BA00E008DF228 /* ClubDatabaseLoader.swift */,
+				409AFE4B2763C1D800011261 /* FirebaseDatabaseLoader.swift */,
+				40C44198274DBE5200F9EC8B /* SportUserDatabaseLoader.swift */,
+				40C44189274D559800F9EC8B /* SquadDatabaseLoader.swift */,
+				40429BB2274AC0D400DAD070 /* WorkoutScheduleListLoader.swift */,
+				40E70B952748534F0074CD2D /* SportEventListLoader.swift */,
+			);
+			path = Loaders;
+			sourceTree = "<group>";
+		};
+		409AFE50276403C100011261 /* Database models */ = {
+			isa = PBXGroup;
+			children = (
+				407BB05F274BA743008DF228 /* ClubDatabaseFlowData.swift */,
+				40C9E9192746A804009B0417 /* MatchResultDatabaseFlowData.swift */,
+				40D899B827500253007DFC52 /* SportEventDatabaseFlowData.swift */,
+				40B208CA2744F701009B769C /* SportNewsDatabaseFlowData.swift */,
+				40B208D1274506AA009B769C /* SportUserDatabaseFlowData.swift */,
+				40C44184274D559700F9EC8B /* SquadDatabaseFlowData.swift */,
+			);
+			path = "Database models";
 			sourceTree = "<group>";
 		};
 		40A1139427471494001BDD99 /* Likes */ = {
@@ -1184,7 +1223,6 @@
 				40FF308E27341BA000A9E375 /* SportEvent.swift */,
 				40C44194274D8CE800F9EC8B /* SportEventProxy.swift */,
 				407ACEB92736A907005D522C /* SportEventCreator.swift */,
-				40D899B827500253007DFC52 /* SportEventDatabaseFlowData.swift */,
 			);
 			path = "News and Match results";
 			sourceTree = "<group>";
@@ -1202,9 +1240,6 @@
 			children = (
 				40B208CF2744F87F009B769C /* SportUser.swift */,
 				40C9E91B2746AB17009B0417 /* SportUserBuilder.swift */,
-				40C4419A274DCC4E00F9EC8B /* UserImageLoader.swift */,
-				40C44198274DBE5200F9EC8B /* SportUserDatabaseLoader.swift */,
-				40B208D1274506AA009B769C /* SportUserDatabaseFlowData.swift */,
 				4033A616274584D100CD3AD3 /* UserRole.swift */,
 				40C44196274DBCF100F9EC8B /* SportUserProxy.swift */,
 			);
@@ -1248,11 +1283,7 @@
 				40C0526127583AAC00C1930A /* ClubCreator.swift */,
 				40C4417E274D4F6200F9EC8B /* ClubProxy.swift */,
 				407BB05D274BA6D0008DF228 /* ClubBuilder.swift */,
-				407BB05B274BA00E008DF228 /* ClubDatabaseLoader.swift */,
-				407BB05F274BA743008DF228 /* ClubDatabaseFlowData.swift */,
-				407BB065274BC89E008DF228 /* ClubStorageDataLoader.swift */,
 				40821D06274CD965009F79F7 /* ClubManager.swift */,
-				40C44183274D559700F9EC8B /* StorageFlowData.swift */,
 			);
 			path = Club;
 			sourceTree = "<group>";
@@ -1285,8 +1316,6 @@
 				40C44186274D559700F9EC8B /* SquadImpl.swift */,
 				40C44182274D559700F9EC8B /* SquadBuilder.swift */,
 				40C0525F275836F200C1930A /* SquadCreator.swift */,
-				40C44184274D559700F9EC8B /* SquadDatabaseFlowData.swift */,
-				40C44189274D559800F9EC8B /* SquadDatabaseLoader.swift */,
 			);
 			path = Squads;
 			sourceTree = "<group>";
@@ -1297,11 +1326,7 @@
 				402EDA6226E42A2A004A2992 /* SportNews.swift */,
 				40E3115A2752EA4A00A5C24F /* SportNewsProxy.swift */,
 				40C9E9132746A5C9009B0417 /* SportNewsBuilder.swift */,
-				40B208CA2744F701009B769C /* SportNewsDatabaseFlowData.swift */,
-				40B208CC2744F730009B769C /* EventImagesLoader.swift */,
-				40E70B952748534F0074CD2D /* SportEventListLoader.swift */,
 				40D899B4274FC997007DFC52 /* DataSnapshotsCollection + Iterator.swift */,
-				4094E6CB2756DAF3000737B9 /* FirebaseObjectBuilder.swift */,
 			);
 			path = SportNews;
 			sourceTree = "<group>";
@@ -1312,7 +1337,6 @@
 				40F52E5B2733D4AF005BD851 /* MatchResult.swift */,
 				40C4419E274DD98700F9EC8B /* MatchResultProxy.swift */,
 				40C9E9152746A608009B0417 /* MatchResultBuilder.swift */,
-				40C9E9192746A804009B0417 /* MatchResultDatabaseFlowData.swift */,
 				40429BBB274AE3E600DAD070 /* MatchResultStatus.swift */,
 			);
 			path = MatchResult;
@@ -1659,7 +1683,7 @@
 				40F4EBE3273DD212003DA1D3 /* ConfigurableLabel.swift in Sources */,
 				40A91866275D820600262BDE /* SignInViewModel.swift in Sources */,
 				40429BB8274ACA8600DAD070 /* WorkoutScheduleBuilder.swift in Sources */,
-				40B6C80F272DB2A600B94A9A /* HockeyPlayerRole.swift in Sources */,
+				40B6C80F272DB2A600B94A9A /* PlayerRole.swift in Sources */,
 				401D53C8275AE1A8006B5458 /* SquadCellModel.swift in Sources */,
 				40A91864275D81F600262BDE /* SignInViewController.swift in Sources */,
 				406C306F26F909690040F0A7 /* PhotoCollectionView.swift in Sources */,

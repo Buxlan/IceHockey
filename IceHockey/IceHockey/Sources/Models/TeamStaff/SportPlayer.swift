@@ -12,7 +12,7 @@ struct SportPlayer: FirebaseObject, Codable {
     var displayName: String
     var smallImage: String = ""
     var largeImage: String = ""
-    var position: HockeyPlayerRole
+    var position: PlayerRole
     var number: String
     
     // MARK: - Lifecircle
@@ -27,7 +27,7 @@ struct SportPlayer: FirebaseObject, Codable {
         guard let displayName = dict["displayName"] as? String else { return nil }
         guard let number = dict["number"] as? String else { return nil }
         let type = (dict["type"] as? Int) ?? 0
-        let position = HockeyPlayerRole(rawValue: type)
+        let position = PlayerRole(rawValue: type)
                 
         self.objectIdentifier = key
         self.displayName = displayName

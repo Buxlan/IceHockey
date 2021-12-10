@@ -23,8 +23,14 @@ extension FirebaseDatabaseLoader {
         }
         databaseQuery.getData { error, snapshot in
             assert(error == nil && !(snapshot.value is NSNull))
-            let object = DataType(snapshot: snapshot)
-            completionHandler(object)
+            if snapshot.value == nil {
+                // user not found in the base user
+                completionHandler(nil)
+            } else {
+                // restore user from snapshot
+                let object = DataType(snapshot: snapshot)
+                completionHandler(object)
+            }
         }
     }
 }
