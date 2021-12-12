@@ -19,6 +19,7 @@ class HomeViewModel {
     var dataSource = TableDataSource()
     var club: Club = ClubManager.shared.current
     private var authManager: AuthManager = FirebaseAuthManager.shared
+    private var clubManager: ClubManager = ClubManager.shared
     lazy var user: ApplicationUser? = authManager.current
     
     var shouldTableRefreshRelay = {}
@@ -40,12 +41,12 @@ class HomeViewModel {
     
     init() {
         authManager.addObserver(self)
-        ClubManager.shared.addObserver(self)
+//        ClubManager.shared.addObserver(self)
     }
     
     deinit {
         authManager.removeObserver(self)
-        ClubManager.shared.removeObserver(self)
+//        ClubManager.shared.removeObserver(self)
     }
             
     // MARK: - Hepler functions        
