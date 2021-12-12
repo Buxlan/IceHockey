@@ -150,6 +150,7 @@
 		4098D765271EFDE0005CD01A /* EventDetailDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4098D764271EFDE0005CD01A /* EventDetailDescriptionView.swift */; };
 		409AFDB72747ADD300AAD62E /* EventDetailPhotoCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409AFDB62747ADD300AAD62E /* EventDetailPhotoCellModel.swift */; };
 		409AFE4C2763C1D800011261 /* FirebaseDatabaseLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409AFE4B2763C1D800011261 /* FirebaseDatabaseLoader.swift */; };
+		409AFE52276412C900011261 /* AuthObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409AFE51276412C900011261 /* AuthObserver.swift */; };
 		409C69E1271CDB0D005434A4 /* OtherProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C69E0271CDB0D005434A4 /* OtherProtocols.swift */; };
 		409DD42B2735D37700055FBD /* ContentConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DD42A2735D37700055FBD /* ContentConfigurator.swift */; };
 		409DD42D2735D43500055FBD /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DD42C2735D43500055FBD /* TableDataSource.swift */; };
@@ -414,6 +415,7 @@
 		4098D764271EFDE0005CD01A /* EventDetailDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailDescriptionView.swift; sourceTree = "<group>"; };
 		409AFDB62747ADD300AAD62E /* EventDetailPhotoCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailPhotoCellModel.swift; sourceTree = "<group>"; };
 		409AFE4B2763C1D800011261 /* FirebaseDatabaseLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseLoader.swift; sourceTree = "<group>"; };
+		409AFE51276412C900011261 /* AuthObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthObserver.swift; sourceTree = "<group>"; };
 		409C69E0271CDB0D005434A4 /* OtherProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProtocols.swift; sourceTree = "<group>"; };
 		409DD42A2735D37700055FBD /* ContentConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentConfigurator.swift; sourceTree = "<group>"; };
 		409DD42C2735D43500055FBD /* TableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
@@ -619,6 +621,7 @@
 			isa = PBXGroup;
 			children = (
 				401C9B0D270D034700F91DC6 /* AuthManager.swift */,
+				409AFE51276412C900011261 /* AuthObserver.swift */,
 				401D53C0275AC655006B5458 /* FirebaseAuthManager.swift */,
 			);
 			path = Auth;
@@ -1608,6 +1611,7 @@
 				40C3BC75272802C800BBA67F /* EditEventDateCell.swift in Sources */,
 				40C0526427583F6100C1930A /* FirebaseObjectCreator.swift in Sources */,
 				40429BBE274AE5A200DAD070 /* DayOfWeek.swift in Sources */,
+				409AFE52276412C900011261 /* AuthObserver.swift in Sources */,
 				40E70B9A27486E4A0074CD2D /* KeyboardAccessoryDoneView.swift in Sources */,
 				4094E6CA2756C739000737B9 /* ApplicationUserCreator.swift in Sources */,
 				407BB066274BC89E008DF228 /* ClubStorageDataLoader.swift in Sources */,
