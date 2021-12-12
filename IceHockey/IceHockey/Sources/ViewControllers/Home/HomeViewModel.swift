@@ -18,8 +18,8 @@ class HomeViewModel {
     var sections: [SectionData] = []
     var dataSource = TableDataSource()
     var club: Club = ClubManager.shared.current
-    private var authManager: AuthManager = FirebaseAuthManager.shared
-    private var clubManager: ClubManager = ClubManager.shared
+    private var authManager = FirebaseAuthManager.shared
+    private var clubManager = ClubManager.shared
     lazy var user: ApplicationUser? = authManager.current
     
     var shouldTableRefreshRelay = {}
@@ -41,12 +41,12 @@ class HomeViewModel {
     
     init() {
         authManager.addObserver(self)
-//        ClubManager.shared.addObserver(self)
+        clubManager.addObserver(self)
     }
     
     deinit {
         authManager.removeObserver(self)
-//        ClubManager.shared.removeObserver(self)
+        clubManager.removeObserver(self)
     }
             
     // MARK: - Hepler functions        

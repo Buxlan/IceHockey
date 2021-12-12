@@ -5,7 +5,7 @@
 //  Created by  Buxlan on 10/30/21.
 //
 
-enum HockeyPlayerRole: Int, Codable, CustomStringConvertible {
+enum PlayerRole: Int, Codable, CustomStringConvertible {
     
     case striker
     case defender
